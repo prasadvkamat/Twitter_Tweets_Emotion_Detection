@@ -1,0 +1,51 @@
+{% extends 'userbase.html' %}
+
+
+{% block body %}
+<section class="cd-faq js-cd-faq container max-width-md margin-top-lg margin-bottom-lg">
+	<!-- cd-faq__categories -->
+	<div class="cd-faq__items">
+		
+		<ul id="basics" class="cd-faq__group">
+			
+			<ul class="cd-faq__categories">
+				<!--<li><a class="cd-faq__category cd-faq__category-selected truncate" href="#basics">Frequently Asked Questions</a></li>-->
+				</ul>
+			
+			<center><li class="cd-faq__title"><h1>View Flight Details</h1></li></center>
+		<!--	{% for row in rows %}
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>{{row['fname']}}</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>{{row['fdescription']}}</p>
+          </div>
+				</div>  cd-faq__content 
+			</li>
+
+			{% endfor %}-->
+
+			<tbody> 
+				{% for value in myData%} 
+				<tr> 
+				  <td>{{ value[0] }}</td> 
+				  <td>{{ value[1] }}</td> 
+				  <td>{{ value[2] }}</td> 
+				  <td>{{ value[3] }}</td> 
+				</tr> 
+				{% endfor %} 
+			  </tbody> 
+
+
+
+		</ul> <!-- cd-faq__group -->
+
+
+		
+	</div> <!-- cd-faq__items -->
+
+	<a href="#0" class="cd-faq__close-panel text-replace">Close</a>
+  
+  <div class="cd-faq__overlay" aria-hidden="true"></div>
+</section> <!-- cd-faq -->
+  {% endblock %}  

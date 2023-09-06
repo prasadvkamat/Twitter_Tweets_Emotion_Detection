@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body %}
+ <!-- section -->
+ <div id="contact" class="section layout_padding">
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-md-6 padding_left_0">
+                <div class="full">
+                    <img class="float-left" src="static/images/signupimage.webp" alt="#" />
+                </div>
+            </div>
+
+           <div class="col-md-6">
+            <div class="heading">
+                    <h2>User <strong class="theme_blue">Login</strong></h2>
+                </div>
+                <div class="full margin_top_20">
+                    <form action="/userloginNext" method="POST">
+                    <div class="row">
+                        <div class="col-sm-12">
+                           <input class="form-control" placeholder="Username" style="color: white;" type="text" name="username" required="">
+                        </div>
+                        <div class="col-sm-12">
+                           <input class="form-control" placeholder="Password" style="color: white;" type="password" name=upassword required="">
+                        </div>
+                    
+                    </div>
+                    <button class="main_bt">Login</button>
+                </form>
+                </div>   
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- end section -->
+
+{% endblock %}

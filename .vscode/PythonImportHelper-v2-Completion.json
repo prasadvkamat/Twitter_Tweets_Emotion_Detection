@@ -1,0 +1,371 @@
+[
+    {
+        "label": "load_model",
+        "importPath": "keras.models",
+        "description": "keras.models",
+        "isExtraImport": true,
+        "detail": "keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "model_from_json",
+        "importPath": "keras.models",
+        "description": "keras.models",
+        "isExtraImport": true,
+        "detail": "keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "load_model",
+        "importPath": "keras.models",
+        "description": "keras.models",
+        "isExtraImport": true,
+        "detail": "keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "os;",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os;",
+        "description": "os;",
+        "detail": "os;",
+        "documentation": {}
+    },
+    {
+        "label": "EmotionPredictor",
+        "importPath": "emotion_predictor",
+        "description": "emotion_predictor",
+        "isExtraImport": true,
+        "detail": "emotion_predictor",
+        "documentation": {}
+    },
+    {
+        "label": "html",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "html",
+        "description": "html",
+        "detail": "html",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "backend",
+        "importPath": "keras",
+        "description": "keras",
+        "isExtraImport": true,
+        "detail": "keras",
+        "documentation": {}
+    },
+    {
+        "label": "sequence",
+        "importPath": "keras.preprocessing",
+        "description": "keras.preprocessing",
+        "isExtraImport": true,
+        "detail": "keras.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "model_to_keras_v1",
+        "kind": 2,
+        "importPath": "models.merge-keras-models",
+        "description": "models.merge-keras-models",
+        "peekOfCode": "def model_to_keras_v1(model_file, weights_file, output_file):\n    model = model_from_json(open(model_file).read())\n    model.load_weights(weights_file)\n    loss = 'categorical_crossentropy' if '-mc-' in model_file else 'binary_crossentropy'\n    model.compile(loss=loss, optimizer='RMSprop')\n    model.save(output_file)\nif __name__ == '__main__':\n    import os\n    classifications = ['ekman', 'plutchik', 'poms']\n    for folder in classifications:",
+        "detail": "models.merge-keras-models",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "app1",
+        "description": "app1",
+        "peekOfCode": "def home():\n    return render_template(\"home.html\")\n@app.route(\"/signup\", methods = [\"GET\",\"POST\"])\ndef signup():\n    msg=None\n    if(request.method==\"POST\"):\n        if (request.form[\"uname\"]!=\"\" and request.form[\"uphone\"]!=\"\" and request.form[\"username\"]!=\"\" and request.form[\"upassword\"]!=\"\"):\n            username=request.form[\"username\"]\n            password=request.form[\"upassword\"]\n            uname=request.form[\"uname\"]",
+        "detail": "app1",
+        "documentation": {}
+    },
+    {
+        "label": "signup",
+        "kind": 2,
+        "importPath": "app1",
+        "description": "app1",
+        "peekOfCode": "def signup():\n    msg=None\n    if(request.method==\"POST\"):\n        if (request.form[\"uname\"]!=\"\" and request.form[\"uphone\"]!=\"\" and request.form[\"username\"]!=\"\" and request.form[\"upassword\"]!=\"\"):\n            username=request.form[\"username\"]\n            password=request.form[\"upassword\"]\n            uname=request.form[\"uname\"]\n            uphone=request.form[\"uphone\"]\n            with sql.connect(\"tweets.db\") as con:\n                c=con.cursor()",
+        "detail": "app1",
+        "documentation": {}
+    },
+    {
+        "label": "contactus",
+        "kind": 2,
+        "importPath": "app1",
+        "description": "app1",
+        "peekOfCode": "def contactus():\n    msg=None\n    if(request.method==\"POST\"):\n        if (request.form[\"name\"]!=\"\" and request.form[\"email\"]!=\"\" and request.form[\"phone\"]!=\"\" and request.form[\"message\"]!=\"\"):\n            name1=request.form[\"name\"]\n            email1=request.form[\"email\"]\n            phone1=request.form[\"phone\"]\n            message1=request.form[\"message\"]\n            with sql.connect(\"flight.db\") as con:\n                c=con.cursor()",
+        "detail": "app1",
+        "documentation": {}
+    },
+    {
+        "label": "userlogin",
+        "kind": 2,
+        "importPath": "app1",
+        "description": "app1",
+        "peekOfCode": "def userlogin():\n    return render_template(\"userlogin.html\")\n@app.route('/userlogout')\ndef userlogout():\n\t# Remove the session variable if present\n\tsession.clear()\n\treturn redirect(url_for('home'))\n@app.route('/userloginNext',methods=['GET','POST'])\ndef userloginNext():\n    msg=None",
+        "detail": "app1",
+        "documentation": {}
+    },
+    {
+        "label": "userlogout",
+        "kind": 2,
+        "importPath": "app1",
+        "description": "app1",
+        "peekOfCode": "def userlogout():\n\t# Remove the session variable if present\n\tsession.clear()\n\treturn redirect(url_for('home'))\n@app.route('/userloginNext',methods=['GET','POST'])\ndef userloginNext():\n    msg=None\n    if (request.method == \"POST\"):\n        username = request.form['username']\n        upassword = request.form['upassword']",
+        "detail": "app1",
+        "documentation": {}
+    },
+    {
+        "label": "userloginNext",
+        "kind": 2,
+        "importPath": "app1",
+        "description": "app1",
+        "peekOfCode": "def userloginNext():\n    msg=None\n    if (request.method == \"POST\"):\n        username = request.form['username']\n        upassword = request.form['upassword']\n        with sql.connect(\"tweets.db\") as con:\n            c=con.cursor()\n            c.execute(\"SELECT username,upassword  FROM signup WHERE username = '\"+username+\"' and upassword ='\"+upassword+\"'\")\n            r=c.fetchall()\n            for i in r:",
+        "detail": "app1",
+        "documentation": {}
+    },
+    {
+        "label": "userhome",
+        "kind": 2,
+        "importPath": "app1",
+        "description": "app1",
+        "peekOfCode": "def userhome():\n    return render_template(\"userhome.html\")\n@app.route('/userpredict')\ndef userpredict():\n    return render_template(\"tweetprediction.html\")\n@app.route('/usergallery')\ndef usergallery():\n    return render_template(\"usergallery.html\")\n@app.route(\"/predict\", methods = [\"GET\", \"POST\"])\ndef predict():",
+        "detail": "app1",
+        "documentation": {}
+    },
+    {
+        "label": "userpredict",
+        "kind": 2,
+        "importPath": "app1",
+        "description": "app1",
+        "peekOfCode": "def userpredict():\n    return render_template(\"tweetprediction.html\")\n@app.route('/usergallery')\ndef usergallery():\n    return render_template(\"usergallery.html\")\n@app.route(\"/predict\", methods = [\"GET\", \"POST\"])\ndef predict():\n# Pandas presentation options\n    if request.method == \"POST\":\n        tweets=[]",
+        "detail": "app1",
+        "documentation": {}
+    },
+    {
+        "label": "usergallery",
+        "kind": 2,
+        "importPath": "app1",
+        "description": "app1",
+        "peekOfCode": "def usergallery():\n    return render_template(\"usergallery.html\")\n@app.route(\"/predict\", methods = [\"GET\", \"POST\"])\ndef predict():\n# Pandas presentation options\n    if request.method == \"POST\":\n        tweets=[]\n        tweet1=request.form[\"tweets\"]\n        tweets += [tweet1]\n        model = EmotionPredictor(classification='ekman', setting='mc', use_unison_model=True)",
+        "detail": "app1",
+        "documentation": {}
+    },
+    {
+        "label": "predict",
+        "kind": 2,
+        "importPath": "app1",
+        "description": "app1",
+        "peekOfCode": "def predict():\n# Pandas presentation options\n    if request.method == \"POST\":\n        tweets=[]\n        tweet1=request.form[\"tweets\"]\n        tweets += [tweet1]\n        model = EmotionPredictor(classification='ekman', setting='mc', use_unison_model=True)\n        print(tweets)\n        predictions = model.predict_classes(tweets)\n        print(predictions, '\\n')",
+        "detail": "app1",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['KERAS_BACKEND']",
+        "kind": 5,
+        "importPath": "app1",
+        "description": "app1",
+        "peekOfCode": "os.environ['KERAS_BACKEND'] = 'theano'\nimport pandas as pd\nfrom emotion_predictor import EmotionPredictor\napp = Flask(__name__)\napp.config['SECRET_KEY'] = 'super secret key'\n@app.route(\"/\")\ndef home():\n    return render_template(\"home.html\")\n@app.route(\"/signup\", methods = [\"GET\",\"POST\"])\ndef signup():",
+        "detail": "app1",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app1",
+        "description": "app1",
+        "peekOfCode": "app = Flask(__name__)\napp.config['SECRET_KEY'] = 'super secret key'\n@app.route(\"/\")\ndef home():\n    return render_template(\"home.html\")\n@app.route(\"/signup\", methods = [\"GET\",\"POST\"])\ndef signup():\n    msg=None\n    if(request.method==\"POST\"):\n        if (request.form[\"uname\"]!=\"\" and request.form[\"uphone\"]!=\"\" and request.form[\"username\"]!=\"\" and request.form[\"upassword\"]!=\"\"):",
+        "detail": "app1",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SECRET_KEY']",
+        "kind": 5,
+        "importPath": "app1",
+        "description": "app1",
+        "peekOfCode": "app.config['SECRET_KEY'] = 'super secret key'\n@app.route(\"/\")\ndef home():\n    return render_template(\"home.html\")\n@app.route(\"/signup\", methods = [\"GET\",\"POST\"])\ndef signup():\n    msg=None\n    if(request.method==\"POST\"):\n        if (request.form[\"uname\"]!=\"\" and request.form[\"uphone\"]!=\"\" and request.form[\"username\"]!=\"\" and request.form[\"upassword\"]!=\"\"):\n            username=request.form[\"username\"]",
+        "detail": "app1",
+        "documentation": {}
+    },
+    {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "db",
+        "description": "db",
+        "peekOfCode": "conn = sqlite3.connect(\"tweets.db\")\nprint(\"opened database successfully\")\nconn.execute(\"CREATE TABLE adminlogin (ausername varchar,apassword varchar)\")\nconn.execute(\"CREATE TABLE tweet (utweet varchar)\")\nconn.execute(\"CREATE TABLE signup (uname varchar,uphone varchar,username varchar,upassword varchar)\")\nconn.execute(\"CREATE TABLE contact (uname varchar,uemail varchar,uphone Number, umessage varchar,uprasad varchar)\")\nprint(\"table created successfully\")\nconn.close()",
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "EmotionPredictor",
+        "kind": 6,
+        "importPath": "emotion_predictor",
+        "description": "emotion_predictor",
+        "peekOfCode": "class EmotionPredictor:\n    def __init__(self, classification, setting, use_unison_model=True):\n        \"\"\"\n        Args:\n            classification (str): Either 'ekman', 'plutchik', 'poms'\n                or 'unison'.\n            setting (str): Either 'mc' or 'ml'.\n            use_unison_model (bool): Whether to use unison model;\n                else use single model.\n        \"\"\"",
+        "detail": "emotion_predictor",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def home():\n    return render_template(\"home.html\")\nif __name__ == \"__main__\":\n    app.run(debug=True)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "app = Flask(__name__)\napp.config['SECRET_KEY'] = 'super secret key'\n@app.route(\"/\")\ndef home():\n    return render_template(\"home.html\")\nif __name__ == \"__main__\":\n    app.run(debug=True)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SECRET_KEY']",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "app.config['SECRET_KEY'] = 'super secret key'\n@app.route(\"/\")\ndef home():\n    return render_template(\"home.html\")\nif __name__ == \"__main__\":\n    app.run(debug=True)",
+        "detail": "test",
+        "documentation": {}
+    }
+]

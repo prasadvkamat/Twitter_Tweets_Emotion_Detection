@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div id="contact" >
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-md-6 padding_left_0">
+                <br>
+                <br>
+                <br>
+                <div class="full">
+                    <img class="float-left"  src="static/images/signupimage.webp" alt="#" />
+                </div>
+            </div>
+
+           <div class="col-md-6">
+            <div class="heading">
+                    <h2>Request a <strong class="theme_blue">Call Back</strong></h2>
+                </div>
+                <div class="full margin_top_20">
+                    <form action="/contactus" method="POST">
+                    <div class="row">
+                        <div class="col-sm-12">
+                           <input class="form-control" placeholder="Your Name" type="text"style="color: white;" name="name"required=""><br>
+                        </div>
+                        <div class="col-sm-12">
+                           <input class="form-control" placeholder="Email" type="Email" name="email" style="color: white;" required=""><br>
+                        </div>
+                        <div class="col-sm-12">
+                            <input class="form-control" placeholder="Phone" type="text" name="phone" style="color: white;" required=""><br>
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea class="form-control textarea" name="message" style="color: white;" placeholder="Message"></textarea><br>
+                        </div>
+                    </div>
+                    <button class="main_bt">Send</button>
+                   
+                </form>
+             
+                <center><div class="col-md-12">
+                    {% if msg %}
+                   <h1 style="color:rgb(26, 25, 25)">  {{msg}} </h1>
+                    {% endif %}
+              </div>
+            </center> 
+                </div>   
+               
+                
+            </div>
+            
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+<!-- end section -->
+
+{% endblock %}
